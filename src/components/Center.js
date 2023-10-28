@@ -17,4 +17,4 @@ function Center() {
     )
 }
 
-export default Center
+export default Center   
