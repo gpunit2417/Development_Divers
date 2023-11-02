@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './AddProject.css';
 import { toast } from 'react-toastify';
+import Sidebar from './Sidebar'
 
 function Addproject() {
     const [description, setDescription] = useState('');
@@ -24,27 +25,34 @@ function Addproject() {
     }
 
     return (
-        <div className="P1Name">
-            <label htmlFor="PName">Add Project Name</label>
-            <br />
-            <input className="PName" type="input"></input>
-            <br />
-            <br />
+        <div className='addprojectpage'>
+            <div>
+                <Sidebar />
+            </div>
+            <div className="P1Name">
+                <label htmlFor="PName">Add Project Name</label>
+                <br />
+                <input className="PName" type="input"></input>
+                <br />
+                <br />
 
-            <label htmlFor="PName1">Add Project Description </label>
-            <br />
-            <textarea
-                className="PName1"
-                rows="4"
-                cols="50"
-                value={description}
-                onChange={handleDescriptionChange}
-            ></textarea>
-            <br />
-            <br />
-            <button id="add" onClick={clickHandler}>ADD</button>
+                <label htmlFor="PName1">Add Project Description </label>
+                <br />
+                <textarea
+                    className="PName1"
+                    rows="4"
+                    cols="50"
+                    value={description}
+                    onChange={handleDescriptionChange}
+                ></textarea>
+                <br />
+                <br />
+                <button id="add" onClick={clickHandler}>ADD</button>
+            </div>
         </div>
     );
 }
 
 export default Addproject;
+
+

@@ -12,7 +12,6 @@ function App() {
           <Route path="/AddProject" element={<AddProject />} />
         </Routes>
       </Router>
-
     </div>
   );
 }
